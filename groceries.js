@@ -9,13 +9,12 @@ function addItem(){
   btnClose.classList.add("btn");
   btnClose.classList.add("btn-danger");
   btnClose.classList.add("btn-xs");
-
   var iconClose = document.createElement("span");
   iconClose.classList.add("glyphicon");
   iconClose.classList.add("glyphicon-remove");
+  btnClose.addEventListener("click",removeParentListItem);
   btnClose.appendChild(iconClose);
   item.appendChild(btnClose);
-
   item.appendChild(itemName);
   list.appendChild(item);
   document.getElementById("newItem").innerHTML = "";
